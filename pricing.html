@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | MediDeliver Uganda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="pricing.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <img src="medicon.jpg" alt="medi deliver logo" class="brand-logo">
+            <span class="brand-text">
+                <a class="navbar-brand fs-3 fw-semi-bold" href="index.html">MediDeliver</a>
+                <p>Health Is Coming</p>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="index2.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 active" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item contacts" >
+                        <a class="nav-link buttonz fs-6  contact rounded-pill" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 cart-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="#" data-bs-toggle="modal" data-bs-target="#accountModal">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="medicon.jpg" alt="medideliver logo" width="90px" height="90px" class="rounded-circle">
+                <h1>Simple, Transparent Pricing</h1>
+                <p class="lead">Choose the plan that works best for your healthcare needs</p>
+                <div class="breadcrumb-container">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index2.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Account Modal -->
+     <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-user-circle"></i> My Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="account-options">
+                        <a href="#" class="account-option text-dark">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-box"></i> My Orders
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-heart"></i> My Wishlist
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-map-marker-alt"></i> Address Book
+                        </a>
+                        <a href="#" class="account-option text-dark">
+                            <i class="fas fa-sign-out-alt"></i> Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pricing Plans Section -->
+    <section class="pricing-plans">
+        <div class="container">
+            <!-- Billing Toggle -->
+            <div class="billing-toggle">
+                <span>Monthly</span>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="billingSwitch">
+                    <label class="form-check-label" for="billingSwitch"></label>
+                </div>
+                <span>Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+
+            <!-- Plans Grid -->
+            <div class="row">
+                <!-- Basic Plan -->
+                <div class="col-lg-4">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Basic</h3>
+                            <p>For occasional medicine purchases</p>
+                            <div class="price">
+                                <span class="amount monthly">UGX 5,000</span>
+                                <span class="amount annually">UGX 4,000</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <div class="annual-note">Billed annually at UGX 48,000</div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Free delivery on orders over UGX 50,000</li>
+                                <li><i class="fas fa-check"></i> 5% discount on all medicines</li>
+                                <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                                <li><i class="fas fa-check"></i> Prescription reminders</li>
+                                <li><i class="fas fa-times"></i> Doctor consultations</li>
+                                <li><i class="fas fa-times"></i> Lab test discounts</li>
+                                <li><i class="fas fa-times"></i> Priority support</li>
+                            </ul>
+                            <button class="btn btn-outline-primary">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Standard Plan (Featured) -->
+                <div class="col-lg-4">
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <h3>Standard</h3>
+                            <p>For regular medicine needs</p>
+                            <div class="price">
+                                <span class="amount monthly">UGX 10,000</span>
+                                <span class="amount annually">UGX 8,000</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <div class="annual-note">Billed annually at UGX 96,000</div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Free delivery on all orders</li>
+                                <li><i class="fas fa-check"></i> 10% discount on all medicines</li>
+                                <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                                <li><i class="fas fa-check"></i> Prescription management</li>
+                                <li><i class="fas fa-check"></i> 2 free doctor consultations/month</li>
+                                <li><i class="fas fa-check"></i> 15% off lab tests</li>
+                                <li><i class="fas fa-times"></i> Priority support</li>
+                            </ul>
+                            <button class="btn btn-primary">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="col-lg-4">
+                    <div class="plan-card">
+                        <div class="plan-header">
+                            <h3>Premium</h3>
+                            <p>For comprehensive healthcare</p>
+                            <div class="price">
+                                <span class="amount monthly">UGX 20,000</span>
+                                <span class="amount annually">UGX 16,000</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <div class="annual-note">Billed annually at UGX 192,000</div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Free priority delivery</li>
+                                <li><i class="fas fa-check"></i> 15% discount on all medicines</li>
+                                <li><i class="fas fa-check"></i> 24/7 premium support</li>
+                                <li><i class="fas fa-check"></i> Full prescription management</li>
+                                <li><i class="fas fa-check"></i> 4 free doctor consultations/month</li>
+                                <li><i class="fas fa-check"></i> 25% off lab tests</li>
+                                <li><i class="fas fa-check"></i> Family plan for up to 4 members</li>
+                            </ul>
+                            <button class="btn btn-outline-primary">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Comparison Section -->
+    <section class="features-comparison">
+        <div class="container">
+            <h2 class="section-title">Plan Comparison</h2>
+            <div class="comparison-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>Basic</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medicine Discount</td>
+                            <td>5%</td>
+                            <td>10%</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>Free Delivery Threshold</td>
+                            <td>Orders over UGX 50,000</td>
+                            <td>All orders</td>
+                            <td>All orders (Priority)</td>
+                        </tr>
+                        <tr>
+                            <td>Doctor Consultations</td>
+                            <td>Not included</td>
+                            <td>2/month</td>
+                            <td>4/month</td>
+                        </tr>
+                        <tr>
+                            <td>Lab Test Discount</td>
+                            <td>Not included</td>
+                            <td>15%</td>
+                            <td>25%</td>
+                        </tr>
+                        <tr>
+                            <td>Prescription Management</td>
+                            <td>Basic reminders</td>
+                            <td>Full management</td>
+                            <td>Full management + refills</td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support</td>
+                            <td>Standard</td>
+                            <td>Standard</td>
+                            <td>Priority 24/7</td>
+                        </tr>
+                        <tr>
+                            <td>Family Members</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What payment methods do you accept?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We accept Mobile Money (MTN, Airtel), credit/debit cards (Visa, Mastercard), and bank transfers. All payments are processed securely through our encrypted payment gateway.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Can I switch plans later?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, you can upgrade or downgrade your plan at any time. When you switch plans, we'll prorate the difference and apply it to your next billing cycle.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Is there a contract or cancellation fee?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No, there are no long-term contracts or cancellation fees. You can cancel your subscription at any time, and your membership will remain active until the end of your current billing period.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            How do the doctor consultations work?
+                        </button>
+                    </h3>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our telemedicine service connects you with licensed doctors via video call or chat. Standard plan includes 2 consultations per month, Premium includes 4. Consultations can be used for general health advice, prescriptions, and follow-ups.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            What areas do you deliver to?
+                        </button>
+                    </h3>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We currently deliver to all major cities in Uganda including Kampala, Entebbe, Jinja, Mbale, Mbarara, and Gulu. We're expanding to more regions soon. Delivery is free for Standard and Premium members, and for Basic members on orders over UGX 50,000.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="pricing-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still have questions?</h2>
+                <p>Our team is ready to help you choose the perfect plan for your needs.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-light">Contact Us</a>
+                    <a href="tel:+256754954141" class="btn btn-outline-light">
+                        <i class="fas fa-phone"></i> Call +256 754954141
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <img src="medicon.jpg" alt="MediDeliver" class="footer-logo">
+                    <p>Your trusted partner for all healthcare needs. Fast, reliable delivery of medicines and health services across Uganda.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index2.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Medicine Delivery</a></li>
+                        <li><a href="#">Doctor Consultation</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Health Products</a></li>
+                        <li><a href="#">Corporate Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt text-primary"></i> Plot 123, Kampala Road, Uganda</li>
+                        <li><i class="fas fa-map-marker-alt text-primary"></i> Opposite Church House</li>
+                        <li><i class="fas fa-phone text-primary"></i> +256754954141, +256708009217</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@medideliver.ug</li>
+                        <li><i class="fas fa-envelope text-primary"></i> paulkennykadama@gmail.com</li>
+                        <li><i class="fas fa-clock text-primary"></i> Mon-Sun: 8:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediDeliver Uganda. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <img src="airtel-money-uganda-seeklogo.png" alt="airtel money" width="30px" height="25px">
+                    <img src="mtn-seeklogo.png" alt="mtn mobile money" width="30px" height="25px">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index2.js"></script>
+    <script src="pricing.js"></script>
+</body>
+</html>

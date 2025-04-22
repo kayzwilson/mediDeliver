@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart | MediDeliver Uganda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <img src="medicon.jpg" alt="medi deliver logo" class="brand-logo">
+            <span class="brand-text">
+                <a class="navbar-brand fs-3 fw-semi-bold" href="index.html">MediDeliver</a>
+                <p>Health Is Coming</p>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="index2.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item contacts">
+                        <a class="nav-link buttonz fs-6 contact rounded-pill" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 cart-link active" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4" href="#" data-bs-toggle="modal" data-bs-target="#accountModal">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeIn">
+                <div class="hero-icon">
+                    <img src="medicon.jpg" alt="medideliver logo" class="rounded-circle">
+                    <div class="pulse-effect"></div>
+                </div>
+                <h1>Your Shopping Cart</h1>
+                <p class="lead">Review and manage your selected medicines</p>
+                <div class="progress-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Cart</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Complete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cart Content -->
+    <main class="cart-main">
+        <div class="container">
+            <div class="row">
+                <!-- Cart Items Column -->
+                <div class="col-lg-8">
+                    <!-- Cart Header -->
+                    <div class="cart-header">
+                        <h2><i class="fas fa-shopping-basket"></i> Your Cart Items</h2>
+                        <div class="cart-actions">
+                            <button class="btn btn-outline-secondary continue-shopping">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </button>
+                            <button class="btn btn-outline-danger clear-cart">
+                                <i class="fas fa-trash"></i> Clear Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Items Table -->
+                    <div class="cart-table">
+                        <div class="cart-table-header">
+                            <div class="row">
+                                <div class="col-md-5">Product</div>
+                                <div class="col-md-2">Price</div>
+                                <div class="col-md-2">Quantity</div>
+                                <div class="col-md-2">Total</div>
+                                <div class="col-md-1">Action</div>
+                            </div>
+                        </div>
+                        <div class="cart-table-body" id="cartItems">
+                            <!-- Cart items will be dynamically inserted here -->
+                            <div class="empty-cart-message animate__animated animate__fadeIn">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h4>Your cart is empty</h4>
+                                <p>Looks like you haven't added anything to your cart yet</p>
+                                <a href="shop.html" class="btn btn-primary">
+                                    <i class="fas fa-arrow-right"></i> Start Shopping
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Save for Later Section -->
+                    <div class="saved-items-section" id="savedItemsSection">
+                        <div class="section-header">
+                            <h3><i class="fas fa-bookmark"></i> Saved for Later</h3>
+                        </div>
+                        <div class="saved-items" id="savedItems">
+                            <!-- Saved items will be dynamically inserted here -->
+                            <div class="empty-saved-message">
+                                <p>No items saved for later</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coupon & Gift Card Section -->
+                    <div class="promo-section">
+                        <div class="coupon-card">
+                            <div class="card-header">
+                                <h4><i class="fas fa-tag"></i> Apply Coupon</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter coupon code" id="couponCode">
+                                    <button class="btn btn-primary" id="applyCoupon">Apply</button>
+                                </div>
+                                <div class="coupon-message" id="couponMessage"></div>
+                                <div class="available-coupons">
+                                    <h5>Available Coupons:</h5>
+                                    <div class="coupon-badge" data-code="MEDI15">MEDI15 - 15% off</div>
+                                    <div class="coupon-badge" data-code="HEALTH20">HEALTH20 - 20% off</div>
+                                    <div class="coupon-badge" data-code="FIRST10">FIRST10 - 10% off</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="gift-card-card">
+                            <div class="card-header">
+                                <h4><i class="fas fa-gift"></i> Gift Card</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter gift card code" id="giftCardCode">
+                                    <button class="btn btn-primary" id="applyGiftCard">Apply</button>
+                                </div>
+                                <div class="gift-card-message" id="giftCardMessage"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Column -->
+                <div class="col-lg-4">
+                    <div class="order-summary">
+                        <div class="summary-header">
+                            <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                            <button class="btn btn-sm btn-outline-secondary" id="editCart">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                        </div>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal (<span id="itemCount">0</span> items):</span>
+                                <span id="subtotal">UGX 0</span>
+                            </div>
+                            <div class="summary-row discount-row">
+                                <span>Discount:</span>
+                                <span id="discount">- UGX 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee:</span>
+                                <span id="deliveryFee">UGX 5,000</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total:</span>
+                                <span id="total">UGX 5,000</span>
+                            </div>
+                        </div>
+                        <div class="delivery-options">
+                            <h4><i class="fas fa-truck"></i> Delivery Options</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="deliveryOption" id="standardDelivery" checked>
+                                <label class="form-check-label" for="standardDelivery">
+                                    <strong>Standard Delivery</strong><br>
+                                    <small>3-5 business days - UGX 5,000</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="deliveryOption" id="expressDelivery">
+                                <label class="form-check-label" for="expressDelivery">
+                                    <strong>Express Delivery</strong><br>
+                                    <small>1-2 business days - UGX 10,000</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="deliveryOption" id="pickupOption">
+                                <label class="form-check-label" for="pickupOption">
+                                    <strong>Store Pickup</strong><br>
+                                    <small>Pick up at our Kampala location - FREE</small>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-checkout w-100" id="proceedToCheckout">
+                            <i class="fas fa-lock"></i> Proceed to Secure Checkout
+                        </button>
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i>
+                            <span>100% Secure Payment</span>
+                            <div class="payment-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <img src="airtel-money-uganda-seeklogo.png" alt="Airtel Money" width="30">
+                                <img src="mtn-seeklogo.png" alt="MTN Mobile Money" width="30">
+                            </div>
+                        </div>
+                        <div class="trust-badges">
+                            <div class="badge-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Checkout</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-undo"></i>
+                                <span>Easy Returns</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-headset"></i>
+                                <span>24/7 Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Support -->
+                    <div class="support-card">
+                        <div class="card-header">
+                            <h4><i class="fas fa-headset"></i> Need Help?</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Our customer care team is available to assist you</p>
+                            <div class="support-options">
+                                <a href="tel:+256754954141" class="btn btn-outline-primary">
+                                    <i class="fas fa-phone"></i> Call Us
+                                </a>
+                                <a href="mailto:info@medideliver.ug" class="btn btn-outline-primary">
+                                    <i class="fas fa-envelope"></i> Email Us
+                                </a>
+                            </div>
+                            <div class="support-hours">
+                                <i class="fas fa-clock"></i> Mon-Sun: 8:00 AM - 10:00 PM
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recently Viewed Items -->
+                    <div class="recently-viewed">
+                        <div class="section-header">
+                            <h4><i class="fas fa-history"></i> Recently Viewed</h4>
+                            <a href="shop.html" class="view-all">View All</a>
+                        </div>
+                        <div class="recent-items" id="recentlyViewed">
+                            <!-- Recently viewed items will be dynamically inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Recommended Items -->
+                    <div class="recommended-items">
+                        <div class="section-header">
+                            <h4><i class="fas fa-heart"></i> Recommended For You</h4>
+                        </div>
+                        <div class="recommended-list" id="recommendedItems">
+                            <!-- Recommended items will be dynamically inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <img src="medicon.jpg" alt="MediDeliver" class="footer-logo">
+                    <p>Your trusted partner for all healthcare needs. Fast, reliable delivery of medicines and health services across Uganda.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Medicine Delivery</a></li>
+                        <li><a href="#">Doctor Consultation</a></li>
+                        <li><a href="#">Lab Tests</a></li>
+                        <li><a href="#">Health Products</a></li>
+                        <li><a href="#">Corporate Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt text-primary"></i> Plot 123, Kampala Road, Uganda</li>
+                        <li><i class="fas fa-phone text-primary"></i> +256754954141, +256708009217</li>
+                        <li><i class="fas fa-envelope text-primary"></i> info@medideliver.ug</li>
+                        <li><i class="fas fa-clock text-primary"></i> Mon-Sun: 8:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MediDeliver Uganda. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <img src="airtel-money-uganda-seeklogo.png" alt="airtel money" width="30px" height="25px">
+                    <img src="mtn-seeklogo.png" alt="mtn mobile money" width="30px" height="25px">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalTitle">Confirm Action</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="confirmationModalBody">
+                    Are you sure you want to clear your cart?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmAction">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-user-circle"></i> My Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="account-options">
+                        <a href="#" class="account-option text-dark">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-box"></i> My Orders
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-heart"></i> My Wishlist
+                        </a>
+                        <a href="#" class="account-option  text-dark">
+                            <i class="fas fa-map-marker-alt"></i> Address Book
+                        </a>
+                        <a href="#" class="account-option text-dark">
+                            <i class="fas fa-sign-out-alt"></i> Sign Out
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto" id="toastTitle">Notification</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="toastMessage">
+                Item added to cart
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
